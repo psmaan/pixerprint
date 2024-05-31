@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.landing-container {
+    background-color: red;
+    width: 1144px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    height: 650px;
+}
+
+/* Sidebar */
+
+.sidebar-container {
+    width: 286px;
+    height: 530px;
+    background-color: #FEFFFE;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.sidebar-header {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.user-image-container {
+    margin-top: 10px;
+    height: 140px;
+    width: 140px;
+}
+
+.user-image-container > img {
+    height: 100%;
+}
+
+.sidebar-header > h2 {
+    text-align: center;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+
+.sidebar-item > h2 {
+    font-weight: 300;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.sidebar-item:hover > h2 {
+    color: #F23F15;
+}
+
+.sidebar-item > div {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    margin: 10px;
+    position: relative;
+}
+
+.side-image > img{
+    height: 100%;
+    position: absolute;
+}
+
+.side-image > img.hover-image {
+    height: 100%;
+    position: absolute;
+    transition: 0.2s;
+}
+
+.sidebar-item:hover > div > img.hover-image {
+    opacity: 0;
+}
+
+/* Main Landing */
+
+.main-landing {
+    background-color: black;
+    height: 100%;
+    width: 820px;
+}
+
+.overview-landing {
+    display: none;
+}
+
+.landing-header {
+    background-color: azure;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 780px;
+}
+
+.landing-overview {
+    height: 150px;
+    width: 100%;
+    margin: 20px;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(4, 24%);
+    justify-content: flex-start;
+}
+
+.overview-item {
+    background-color: white;
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.item-image {
+    height: 35px;
+    width: 35px;
+    margin: 20px 0;
+}
+
+.item-image > img {
+    height: 100%;
+}
+
+.order-history-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    margin: 10px 20px;
+}
+
+.order-history-header > h1 {
+    font-size: 25px;
+}
+
+.order-history-header > a {
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: aqua;
+}
+
+
+.order-history-grid {
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+    width: 100%;
+    margin: 10px 20px;
+}
+
+.history-grid-row {
+    display: grid;
+    grid-template-columns: 20% repeat(5, 16%);
+    grid-template-rows: 100%;
+    border-radius: none;
+}
+
+.history-grid-row.row-header {
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 20% repeat(5, 16%);
+    grid-template-rows: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+}
+
+.history-row-item {
+    padding-left: 20px;
+    background-color: rgb(87, 87, 87);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order-detail-image {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+}
+
+/* Account Section */
+
+.account-section {
+    width: 100%;
+    height: 500px;
+    background-color: pink;
+    padding-left: 20px;
+}
+
+.account-form {
+    background-color: white;
+    margin-top: 30px;
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+form {
+    margin-top: 20px;
+    background-color: red;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-field > input {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+}
+
+.save-button {
+    margin: 30px 10px;
+    background-color: #F23F15;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+}
+
+
+
+
