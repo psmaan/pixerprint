@@ -146,7 +146,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: bisque;
     margin: 10px 20px;
 }
 
@@ -158,7 +157,14 @@
     font-size: 15px;
     padding: 10px 15px;
     border-radius: 20px;
-    background-color: aqua;
+    background-color: #FEF2F0;
+    color: #F23F15;
+    transition: 0.3s;
+}
+
+.order-history-header > a:hover {
+    color: #FEF2F0;
+    background-color: #F23F15;
 }
 
 
@@ -186,14 +192,25 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: white;
+    border-bottom: 2px solid #E4E6EA;
 }
 
 .history-row-item {
     padding-left: 20px;
-    background-color: rgb(87, 87, 87);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: aqua;
+}
+
+.history-row-item {
+    display: flex;
+    flex
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
 }
 
 .order-detail-image {
