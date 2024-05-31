@@ -6,7 +6,6 @@
 }
 
 .landing-container {
-    background-color: red;
     width: 1144px;
     margin: auto;
     margin-top: 100px;
@@ -96,17 +95,14 @@
 /* Main Landing */
 
 .main-landing {
-    background-color: black;
     height: 100%;
     width: 820px;
 }
 
 .overview-landing {
-    display: none;
 }
 
 .landing-header {
-    background-color: azure;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -117,7 +113,6 @@
     height: 150px;
     width: 100%;
     margin: 20px;
-    background-color: blueviolet;
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: repeat(4, 24%);
@@ -132,6 +127,7 @@
     display: flex;
     flex-direction: column;
     padding-left: 10px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
 }
 
 .item-image {
@@ -169,9 +165,10 @@
 .order-history-grid {
     display: flex;
     flex-direction: column;
-    background-color: cadetblue;
     width: 100%;
     margin: 10px 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
 }
 
 .history-grid-row {
@@ -212,7 +209,6 @@
     height: 500px;
     background-color: pink;
     padding-left: 20px;
-    display: none;
 }
 
 .account-form {
@@ -259,20 +255,25 @@ form {
 /* Address Container */
 
 .address-container {
-    background-color: rgb(99, 99, 99);
     padding-left: 20px;
     height: 500px;
     width: 100%;
 }
 
+.address-container > h1 {
+    color: #F23F15;
+}
+
 .address-list {
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     display: grid;
     grid-template-columns: 45% 45%;
     justify-content: space-around;
     border: 1px solid black;
+    margin-top: 30px;
+    border-radius: 24px;
 }
 
 .address-list > div{
@@ -281,9 +282,35 @@ form {
 }
 
 .address-card {
-    background-color: red;
+    background-color: #f6f7f6;
     display: flex;
     flex-direction: column;
+    min-height: 180px;
+}
+
+.address-header {
+    width: 95%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.address-dropdown {
+    height: 20px;
+    width: 20px;
+}
+
+.address-dropdown > img {
+    height: 100%;
+}
+
+.address-card > p {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .add-address {
