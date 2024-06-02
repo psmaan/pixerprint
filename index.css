@@ -5,6 +5,10 @@
     font-weight: 500;
 }
 
+body {
+    background-color: #FEFFFE;
+}
+
 .landing-container {
     width: 1144px;
     margin: auto;
@@ -12,7 +16,9 @@
     display: flex;
     flex-direction: row;
     height: 650px;
+    margin-bottom: 200px;
 }
+
 
 /* Sidebar */
 
@@ -34,8 +40,8 @@
 
 .user-image-container {
     margin-top: 10px;
-    height: 140px;
-    width: 140px;
+    height: 100px;
+    width: 100px;
 }
 
 .user-image-container > img {
@@ -43,6 +49,8 @@
 }
 
 .sidebar-header > h2 {
+    margin-top: 20px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -59,21 +67,28 @@
     height: 50px;
 }
 
-.sidebar-item > h2 {
+.sidebar-item > button {
+    margin-left: 10px;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 16px;
     transition: 0.2s;
+    border: none;
+    background-color: transparent;
+    width: 80%;
+    text-align: left;
+    height: 100%;
 }
 
-.sidebar-item:hover > h2 {
+.sidebar-item:hover > button {
     color: #F23F15;
 }
 
 .sidebar-item > div {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-color: white;
     margin: 10px;
+    margin-left: 20px;
     position: relative;
 }
 
@@ -100,6 +115,7 @@
 }
 
 .overview-landing {
+    display: none;
 }
 
 .landing-header {
@@ -114,13 +130,18 @@
     color: #F23F15;
 }
 
+.landing-header > h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
 .landing-overview {
     height: 160px;
     width: 100%;
     margin: 20px;
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: repeat(4, 24%);
+    grid-template-columns: repeat(4, 23%);
     justify-content: space-between;
 }
 
@@ -131,7 +152,13 @@
     display: flex;
     flex-direction: column;
     padding-left: 10px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
+}
+
+.overview-item > h3 {
+    color: #6F7191;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .item-image {
@@ -225,9 +252,17 @@
 
 .history-row-item > h3 {
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     padding: 5px 10px;
-    font-size: 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.row-header > .history-row-item > h3 {
+    text-align: center;
+    font-weight: 600;
+    padding: 5px 10px;
+    font-size: 15px;
     border-radius: 20px;
 }
 
@@ -239,14 +274,16 @@
     display: flex;
     flex-direction: row;
     flex-direction: column;
+    padding-left: 10px;
 }
 
 .order-details > h3 {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .order-details > h4 {
-    font-size: 12px;
+    font-size: 10px;
+    color: #6f7191;
 }
 
 .history-row-item.item-action {
@@ -264,6 +301,99 @@
 
 .order-detail-image > img {
     height: 100%;
+}
+
+@media (max-width: 1150px) {
+    .landing-container {
+        width: 100%;
+    }
+
+    .sidebar-container {
+        width: 25%;
+        margin-left: 10px;
+    }
+
+    .main-landing {
+        width: 70%;
+    }
+
+    .landing-header {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar-container {
+        display: none;
+    }
+
+    .main-landing {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-overview {
+        height: 320px;
+        width: 100%;
+        margin: 20px;
+        display: grid;
+        grid-template-rows: 48% 48%;
+        grid-template-columns: repeat(2, 45%);
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+    .overview-item {
+        height: 90%;
+    }
+}
+
+/* Orders Section */
+
+.order-summary {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.order-summary > h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Return Orders*/
+
+.return-grid > .history-grid-row {
+    display: grid;
+    grid-template-columns: 20% repeat(5, 20%);
+    grid-template-rows: 100%;
+    border-radius: none;
+    height: 60px;
+    border-bottom: 1px solid #E4E6EA;
+}
+
+.return-grid > .order-summary {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.return-grid > .order-summary > h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media (max-width: 600px) {
+    .order-history-grid {
+        background-color: red;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .order-history-grid > div {
+        width: 595px;
+    }
 }
 
 /* Account Section */
@@ -324,6 +454,12 @@ form {
     border-radius: 40px;
 }
 
+/* Password Section */
+
+.password-section {
+    margin-left: 20px;
+}
+
 /* Address Container */
 
 .address-container {
@@ -361,12 +497,12 @@ form {
 }
 
 .address-header {
-    width: 95%;
+    width: 90%;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
+    margin: 15px;
     margin-bottom: 20px;
 }
 
