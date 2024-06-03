@@ -10,12 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="navbar-container">
+
+    </div>
     <div class="landing-container">
 
         <div class="sidebar-container">
             <div class="sidebar-header">
                 <div class="user-image-container">
-                    <img src="media/pfp.png">
+                    <div class="user-border">
+                        <img src="media/pfp.png">
+                    </div>
                 </div>
                 <h2>Nestiko Business</h2>
             </div>
@@ -181,10 +186,10 @@
                             <h3>1 Product</h3>
                         </div>
                         <div class="history-row-item item-status">
-                            <h3 style="color: #DCFCE6; background-color: #20C55C;">Delivered</h3>
+                            <h3 style="background-color: #DCFCE6; color: #20C55C;">Delivered</h3>
                         </div>
                         <div class="history-row-item">
-                            <h3 style="color: #DCFCE6; background-color: #20C55C;">Paid</h3>
+                            <h3 style="background-color: #DCFCE6; color: #20C55C;">Paid</h3>
                         </div>
                         <div class="history-row-item">
                             <h3>₹11.43</h3>
@@ -489,11 +494,23 @@
                         </div>
                         <div class="form-field">
                             <label>Phone<span style="color: #F23F15;">*</span></label>
-                            <input type="text">
+                            <div class="phone-no">
+                                <select name="countries" id="countries">
+                                    <option value="volvo"><img src="media/account.png"> +91</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="opel">Opel</option>
+                                    <option value="audi">Audi</option>
+                                  </select>
+                                <input type="text">
+                            </div>
+
                         </div>
                         <div class="form-field">
                             <label>Upload Image</label>
-                            <input type="text">
+                            <div class="upload-container">
+                                <button>Upload Image</button>
+                                <input type="text">
+                            </div>
                         </div>
                     </form>
                 </div>
