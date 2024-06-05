@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Add event listeners to all images inside order-detail-image divs
-    const images = document.querySelectorAll('.order-detail-image img');
+    const images = document.querySelectorAll('.order-detail-image img, .address-dropdown img');
     images.forEach(image => {
         image.addEventListener('click', showDropdown);
     });

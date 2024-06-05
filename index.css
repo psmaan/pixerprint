@@ -536,11 +536,11 @@ body {
 .order-summary {
     display: flex;
     align-items: center;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .order-summary > h3 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -562,7 +562,7 @@ body {
 .return-grid > .order-summary {
     display: flex;
     align-items: center;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .return-grid > .order-summary > h3 {
@@ -810,6 +810,7 @@ form {
 .address-dropdown {
     height: 20px;
     width: 20px;
+    position: relative;
 }
 
 .address-dropdown > img {
