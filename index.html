@@ -10,6 +10,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="address-edit-container" style="display: none;">
+        <div class="address-editor">
+            <div class="address-editor-header">
+                <h1>Address Change</h1>
+                <img src="media/cross-editor.png">
+            </div>
+            <div class="editor-form">
+                <div class="editor-grid">
+                    <div class="editor-grid-item">
+                        <label>Full Name <span class="#F23F15">*</span></label>
+                        <input>
+                    </div>
+                    <div class="editor-grid-item">
+                        <label>Email</label>
+                        <input>
+                    </div>
+                    <div class="editor-grid-item">
+                        <label>Phone<span style="color: #F23F15;">*</span></label>
+                        <div class="phone-no editor">
+                            <select name="countries" id="countries">
+                                <option value="volvo"><img src="media/account.png"> +91</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                              </select>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="editor-grid-item">
+                        <label>Country<span style="color: #F23F15;">*</span></label>
+                        <div class="phone-no selectors">
+                            <select name="countries" id="countries">
+                                <option value="volvo"><img src="media/account.png"> --</option>
+                                <option value="saab">--</option>
+                                <option value="opel">--</option>
+                                <option value="audi">--</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="editor-grid-item">
+                        <label>State</label>
+                        <div class="phone-no selectors">
+                            <select name="countries" id="countries">
+                                <option value="volvo"><img src="media/account.png"> --</option>
+                                <option value="saab">--</option>
+                                <option value="opel">--</option>
+                                <option value="audi">--</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="editor-grid-item">
+                        <label>City</label>
+                        <div class="phone-no selectors">
+                            <select name="countries" id="countries">
+                                <option value="volvo"><img src="media/account.png"> --</option>
+                                <option value="saab">--</option>
+                                <option value="opel">--</option>
+                                <option value="audi">--</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="editor-grid-item">
+                        <label>ZIP Code</label>
+                        <input>
+                    </div>
+                    <div class="editor-grid-item">
+                        <label>Street Address <span class="#F23F15">*</span></label>
+                        <input>
+                    </div>
+                </div>
+                <div class="address-editor-buttons">
+                    <button class="submit">Save Changes</button>
+                    <button class="cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="navbar-container">
 
     </div>
@@ -65,7 +142,7 @@
 
         </div>
         <div class="main-landing">
-            <div class="overview-landing">
+            <div class="overview-landing" style="display: none;">
                 <div class="landing-header">
                     <h1>Overview</h1>
                     <h3>Welcome back, Nestiko Business!</h3>
@@ -102,7 +179,7 @@
                 </div>
                 <div class="order-history-header">
                     <h1>Order History</h1>
-                    <a>Show Full History</a>
+                    <a onclick="showOrders()">Show Full History</a>
                 </div>
                 <div class="order-history-grid">
                     <div class="history-grid-row row-header">
@@ -146,7 +223,15 @@
                         </div>
                         <div class="history-row-item item-action">
                             <div class="order-detail-image">
-                                <img src="media/tripledotorange.png">
+                                <img src="media/tripledotorange.png" onclick="showDropdown()">
+                                <div class="order-dropdown">
+                                    <div class="order-edit">
+                                        <a>View</a>
+                                    </div>
+                                    <div class="order-download">
+                                        <a>Download</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -171,7 +256,15 @@
                         </div>
                         <div class="history-row-item item-action">
                             <div class="order-detail-image">
-                                <img src="media/tripledotorange.png">
+                                <img src="media/tripledotorange.png" onclick="showDropdown()">
+                                <div class="order-dropdown">
+                                    <div class="order-edit">
+                                        <a>View</a>
+                                    </div>
+                                    <div class="order-download">
+                                        <a>Download</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -196,7 +289,15 @@
                         </div>
                         <div class="history-row-item item-action">
                             <div class="order-detail-image">
-                                <img src="media/tripledotorange.png">
+                                <img src="media/tripledotorange.png" onclick="showDropdown()">
+                                <div class="order-dropdown">
+                                    <div class="order-edit">
+                                        <a>View</a>
+                                    </div>
+                                    <div class="order-download">
+                                        <a>Download</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -250,6 +351,14 @@
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
                                     <img src="media/tripledotorange.png">
+                                    <div class="order-dropdown">
+                                        <div class="order-edit">
+                                            <a>View</a>
+                                        </div>
+                                        <div class="order-download">
+                                            <a>Download</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -275,6 +384,14 @@
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
                                     <img src="media/tripledotorange.png">
+                                    <div class="order-dropdown">
+                                        <div class="order-edit">
+                                            <a>View</a>
+                                        </div>
+                                        <div class="order-download">
+                                            <a>Download</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -300,6 +417,14 @@
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
                                     <img src="media/tripledotorange.png">
+                                    <div class="order-dropdown">
+                                        <div class="order-edit">
+                                            <a>View</a>
+                                        </div>
+                                        <div class="order-download">
+                                            <a>Download</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -324,7 +449,15 @@
                             </div>
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
-                                    <img src="media/tripledotorange.png">
+                                    <img src="media/tripledotorange.png" onclick="showDropdown()">
+                                    <div class="order-dropdown">
+                                        <div class="order-edit">
+                                            <a href="#">View</a>
+                                        </div>
+                                        <div class="order-download">
+                                            <a href="#">Download</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -350,6 +483,14 @@
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
                                     <img src="media/tripledotorange.png">
+                                    <div class="order-dropdown">
+                                        <div class="order-edit">
+                                            <a>View</a>
+                                        </div>
+                                        <div class="order-download">
+                                            <a>Download</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -375,6 +516,14 @@
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
                                     <img src="media/tripledotorange.png">
+                                    <div class="order-dropdown">
+                                        <div class="order-edit">
+                                            <a>View</a>
+                                        </div>
+                                        <div class="order-download">
+                                            <a>Download</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -424,7 +573,7 @@
                             </div>
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
-                                    <img src="media/tripledotorange.png">
+                                    <img src="media/return-eye.png" onclick="showReturnPage()">
                                 </div>
                             </div>
                         </div>
@@ -446,7 +595,7 @@
                             </div>
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
-                                    <img src="media/tripledotorange.png">
+                                    <img src="media/return-eye.png" onclick="showReturnPage()">
                                 </div>
                             </div>
                         </div>
@@ -468,7 +617,7 @@
                             </div>
                             <div class="history-row-item item-action">
                                 <div class="order-detail-image">
-                                    <img src="media/tripledotorange.png">
+                                    <img src="media/return-eye.png" onclick="showReturnPage()">
                                 </div>
                             </div>
                         </div>
@@ -523,11 +672,11 @@
                     <form>
                         <div class="form-field old-password">
                             <label for="fullname">Old Password<span style="color: #F23F15;">*</span></label>
-                            <input id="fullname" type="text" placeholder="Nestiko Business">
+                            <input id="fullname" type="text">
                         </div>
                         <div class="form-field">
                             <label>New Password<span style="color: #F23F15;">*</span></label>
-                            <input type="text" placeholder="nestikobusiness@gmail.com">
+                            <input type="text">
                         </div>
                         <div class="form-field">
                             <label>Confirm Password<span style="color: #F23F15;">*</span></label>
@@ -545,6 +694,14 @@
                             <h4>Mahesh Kumar Kumawat</h4>
                             <div class="address-dropdown">
                                 <img src="media/tripledot.png">
+                                <div class="order-dropdown">
+                                    <div class="order-edit">
+                                        <a>View</a>
+                                    </div>
+                                    <div class="order-download">
+                                        <a>Download</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <p>nestikobusiness@gmail.com, 8290262306, Rajasthan, Jaipur, India,</p>
@@ -555,6 +712,14 @@
                             <h4>Mahesh Kumar Kumawat</h4>
                             <div class="address-dropdown">
                                 <img src="media/tripledot.png">
+                                <div class="order-dropdown">
+                                    <div class="order-edit">
+                                        <a>View</a>
+                                    </div>
+                                    <div class="order-download">
+                                        <a>Download</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <p>nestikobusiness@gmail.com, 8290262306, Rajasthan, Jaipur, India,</p>
@@ -566,6 +731,234 @@
                     </div>
                 </div>
             </div>
+            <div class="order-detail-container" style="display: none;">
+                <div class="order-detailer-header">
+                    <img>
+                    <h1>Order Details</h1>
+                </div>
+                <div class="order-detailer-container">
+                    <div class="tracking-header">
+                        <h2>Thank You</h2>
+                        <h4>Your Order Status is as follows</h4>
+                        <h3>Order ID: <span style="color: #F23F15;"># 2405249</span></h3>
+                    </div>
+                    <div class="tracking-visuals">
+                        <div class="tracking-section">
+                            <img src="media/check-status.png">
+                            <h3>Order Pending</h3>
+                        </div>
+                        <div class="tracking-section">
+                            <img src="media/BLAnk-status.png">
+                            <h3>Order Confirmed</h3>
+                        </div>
+                        <div class="tracking-section">
+                            <img src="media/BLAnk-status.png">
+                            <h3>Order On The Way</h3>
+                        </div>
+                        <div class="tracking-section">
+                            <img src="media/BLAnk-status.png">
+                            <h3>Order Delivered</h3>
+                        </div>
+                    </div>
+                    <div class="order-summary-details">
+                        <div class="order-tracking">
+                            <div class="order-flags">
+                                <div class="order-flag">
+                                    <h3>Order ID:</h3>
+                                    <h3>#2405249</h3>
+                                </div>
+                                <div class="order-flag">
+                                    <h3>Order Date</h3>
+                                    <h3>24-05-2024 11:52 AM</h3>
+                                </div>
+                                <div class="order-flag">
+                                    <h3>Order Type</h3>
+                                    <h3>Delivery</h3>
+                                </div>
+                                <div class="order-flag">
+                                    <h3>Order Status:</h3>
+                                    <h3>Pending</h3>
+                                </div>
+                                <div class="order-flag">
+                                    <h3>Payment Status:</h3>
+                                    <h3>#2405249</h3>
+                                </div>
+                                <div class="order-flag">
+                                    <h3>Payment Method:</h3>
+                                    <h3>Cash on Delivery</h3>
+                                </div>
+                            </div>
+                            <div class="shipping-container">
+                                <h1>Shipping Address</h1>
+                                <div class="shipping-details">
+                                    <h3>Name:</h3>
+                                    <h3>Mahesh Kumar Kumawat</h3>
+                                </div>
+                                <div class="shipping-details">
+                                    <h3>Phone:</h3>
+                                    <h3>+91 8290262306</h3>
+                                </div>
+                                <div class="shipping-details">
+                                    <h3>Email:</h3>
+                                    <h3>nestikobusiness@gmail.com</h3>
+                                </div>
+                                <div class="shipping-details">
+                                    <h3>Name:</h3>
+                                    <h3>Aakash Institute, Rajapark,
+                                         In Front Of LBS College, Jaipur<br>
+                                         Jaipur,Rajasthan,India,30370
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="shipping-container">
+                                <h1>Billing Address</h1>
+                                <div class="shipping-details">
+                                    <h3>Name:</h3>
+                                    <h3>Mahesh Kumar Kumawat</h3>
+                                </div>
+                                <div class="shipping-details">
+                                    <h3>Phone:</h3>
+                                    <h3>+91 8290262306</h3>
+                                </div>
+                                <div class="shipping-details">
+                                    <h3>Email:</h3>
+                                    <h3>nestikobusiness@gmail.com</h3>
+                                </div>
+                                <div class="shipping-details">
+                                    <h3>Name:</h3>
+                                    <h3>Aakash Institute, Rajapark,
+                                         In Front Of LBS College, Jaipur<br>
+                                         Jaipur,Rajasthan,India,30370
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="order-cart-container">
+                                <h1>Order Summary</h1>
+                                <div class="order-cart">
+                                    <div class="order-cart-main">
+                                        <div class="cart-image">
+                                            <img>
+                                        </div>
+                                        <div class="cart-details">
+                                            <h4>Gold Foil Visiting Card</h4>
+                                            <h4>Card Shape No. 5 | 210 GSM | 200 Micron | Double Side |
+                                                Dual Side | Dual Side | Tag Shape No. 2 | Gloss Coating
+                                            </h4>
+                                            <div class="cart-numbers">
+                                                <h4>₹91.0</h4>
+                                                <h4>Quantity: 1</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-pricing-container">
+                                        <div class="cart-pricing">
+                                            <h4>Subtotal</h4>
+                                            <h3>₹91.0</h3>
+                                        </div>
+                                        <div class="cart-pricing">
+                                            <h4>Tax Fee</h4>
+                                            <h3>₹91.0</h3>
+                                        </div>
+                                        <div class="cart-pricing">
+                                            <h4>Shipping Charge</h4>
+                                            <h3>₹91.0</h3>
+                                        </div>
+                                        <div class="cart-pricing">
+                                            <h4>Discount</h4>
+                                            <h3>₹91.0</h3>
+                                        </div>
+                                    </div>
+                                    <div class="cart-total">
+                                        <div class="cart-pricing">
+                                            <h4>Subtotal</h4>
+                                            <h3>₹91.0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailer-buttons">
+                    <button>Download Receipt</button>
+                    <button>Cancel Order</button>
+                </div>
+            </div>
+            <div class="return-order-page">
+                <div class="returner-header">
+                    <img src="media/return-button.png">
+                    <h3>Return Order Details</h3>
+                </div>
+                <div class="returner-main">
+                    <div class="returner-main-id">
+                        <div class="return-main-id">
+                            <h3>Order ID: #1705246</h3>
+                        </div>
+                    </div>
+                    <div class="return-main-details">
+                        <div class="return-grid-toprow">
+                            <div class="return-row-item">
+                                <h3>Products</h3>
+                            </div>
+                            <div class="return-row-item">
+                                <h3>Quantity</h3>
+                            </div>
+                            <div class="return-row-item">
+                                <h3>Price</h3>
+                            </div>
+                            <div class="return-row-item">
+                                <h3>Total</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="return-main-details second">
+                        <div class="return-grid-bottomrow">
+                            <div class="return-row-item">
+                                <div class="return-info-container">
+                                    <img src="media/order-return-icon.png">
+                                    <div class="main-info-return">
+                                        <h4>Gold Foil Visiting Card</h4>
+                                        <h4>Card Shape No. 4 | 210 GSM | 800 Micron |
+                                             Double Side | Dual Side | Dual Side |
+                                              Tag Shape No. 2
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="return-row-item">
+                                <h3>1</h3>
+                            </div>
+                            <div class="return-row-item">
+                                <h3>₹150.00	</h3>
+                            </div>
+                            <div class="return-row-item">
+                                <h3>₹177.00	</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="returner-detailer">
+                    <div class="returner-detailer-section">
+                        <h3>Return Reason</h3>
+                        <h4>Other</h4>
+                    </div>
+                    <div class="returner-detailer-section">
+                        <h3>Return Note</h3>
+                        <h4>Lamination is not proper</h4>
+                    </div>
+                    <div class="returner-detailer-section">
+                        <h3>Attachment</h3>
+                        <img src="media/return-attachment.png">
+                    </div>
+                </div>
+                <div class="return-response-container">
+                    <h3>Return Reponse</h3>
+                    <h4>Status: <span style="color: #20C55C;">Accepted</span></h4>
+                </div>
+            </div>
+
         </div>
     </div>
     
