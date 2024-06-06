@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const addressEditorImage = document.querySelector('.add-address');
     addressEditorImage.addEventListener('click', showAddressEditor);
 
-    const addressViwEditor = document.querySelector('.order-edit');
-    addressViwEditor.addEventListener('click', showAddressEditor);
+    const addressViewEditor = document.querySelector('.address-edit > a');
+    addressViewEditor.addEventListener('click', showAddressEditor);
 });
 
 
