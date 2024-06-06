@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var addressSection = document.querySelector(".address-container");
 
     var returnPageSection = document.querySelector(".return-order-page");
+    var orderPageSection = document.querySelector(".order-detail-container");
 
     var allSections = document.querySelectorAll(".main-landing > div");
 
@@ -57,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
             section.style.display = "none";
         });
         returnPageSection.style.display = "block";
+    }
+
+    window.showOrderPage = function () {
+        allSections.forEach(function (section) {
+            section.style.display = "none";
+        });
+        orderPageSection.style.display = "block";
     }
 });
 
@@ -120,6 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const addressEditorImage = document.querySelector('.add-address');
     addressEditorImage.addEventListener('click', showAddressEditor);
+
+    const addressViwEditor = document.querySelector('.order-edit');
+    addressViwEditor.addEventListener('click', showAddressEditor);
 });
 
 
